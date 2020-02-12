@@ -150,3 +150,169 @@
 .slider-right:hover {
     transform: scale(1.4);
 }
+
+.services {
+    height: 401px;
+    background-color: #f1f1f1;
+    border-bottom: #ffffff 6px solid;
+    padding-top: 47px;
+}
+
+.services-title {
+    margin-left: 33px;
+    margin-bottom: 14px;
+    letter-spacing: 0.2px;
+    font-size: 24px;
+    color: #666d89;
+    font-family: "Lato-Regular";
+}
+
+.services-subtitle {
+    margin: 0 auto;
+    word-spacing: 0.2px;
+    width: 751px;
+    height: 57px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #767e9e;
+    font-family: "Lato-Regular";
+}
+
+.services-characteristic {
+    display: flex;
+    width: 702px;
+    justify-content: space-between;
+    margin-left: 96px;
+    margin-top: 25px;
+}
+
+.services-characteristic__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.characteristic_element h3 {
+    font-size: 15px;
+    color: #666d89;
+    font-family: "Lato-Regular";
+    letter-spacing: -0.1px;
+    word-spacing: -0.6px;
+    overflow: hidden;
+}
+
+.characteristic_element p {
+    width: 189px;
+    height: 72px;
+    margin-top: 8px;
+    font-size: 9px;
+    color: #767e9e;
+    font-family: "Lato-Light";
+    line-height: 16px;
+    word-spacing: 3.1px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.feel,
+.love,
+.support,
+.inovative,
+.responsive,
+.design {
+    position: relative;
+}
+
+.feel::before,
+.love::before,
+.support::before,
+.inovative::before,
+.responsive::before,
+.design::before {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 29px;
+    border: 1.5px solid #666d89;
+    position: absolute;
+    top: 4px;
+    left: -63px;
+}
+
+.design::after {
+    content: "";
+    background-image: url(./assets/image/services-design.svg);
+    display: block;
+    width: 26px;
+    height: 29px;
+    top: 15px;
+    left: -52px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+.responsive::after {
+    content: "";
+    background-image: url(./assets/image/services-responsiv.svg);
+    display: block;
+    width: 25px;
+    height: 28px;
+    top: 14px;
+    left: -49px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+.inovative::after {
+    content: "";
+    background-image: url(./assets/image/services-inovative.svg);
+    display: block;
+    width: 20px;
+    height: 28px;
+    top: 14px;
+    left: -50px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.support::after {
+    content: "";
+    background-image: url(./assets/image/services-support.svg);
+    display: block;
+    width: 27px;
+    height: 28px;
+    top: 17px;
+    left: -53px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.love::after {
+    content: "";
+    background-image: url(./assets/image/services-love.svg);
+    display: block;
+    width: 27px;
+    height: 28px;
+    top: 17px;
+    left: -53px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.feel::after {
+    content: "";
+    background-image: url(./assets/image/services_feellike.svg);
+    display: block;
+    width: 27px;
+    height: 28px;
+    top: 15px;
+    left: -53px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
