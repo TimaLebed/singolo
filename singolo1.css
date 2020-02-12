@@ -66,3 +66,87 @@
 .header-navbar__link:hover {
     color: #f06c64;
 }
+
+.main { 
+    width: 816px;
+    height: 70px;
+    margin: 0 auto;  
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 486px;
+    background-color: #f06c64;
+    border-top: #323746 6px solid;
+    border-bottom: #ea676b 8px solid;
+    position: relative;
+}
+
+.phone-vertical {
+    width: 100%;
+    height: 389px;
+    max-width: 193px;
+    background-size: contain;
+    background-image: url(./assets/image/Shadow.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.phone-vertical::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(./assets/image/image-inner-vertical.png);
+    top: 50px;
+    left: 11px;
+    width: 155px;
+    height: 271px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.phone-horizontal {
+    height: 193px;
+    width: 389px;
+    background-size: contain;
+    background-image: url(./assets/image/Shadow-horiz.png);
+    background-repeat: no-repeat;
+    margin-left: 58px;
+    position: relative;
+}
+
+.phone-horizontal::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(./assets/image/image-inner-gorizont.png);
+    top: 9px;
+    left: 47px;
+    width: 271px;
+    height: 155px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider-left {
+    position: absolute;
+    top: 220px;
+    left: 29px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.slider-right {
+    position: absolute;
+    top: 220px;
+    right: 27px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.slider-left:hover,
+.slider-right:hover {
+    transform: scale(1.4);
+}
