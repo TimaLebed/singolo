@@ -172,6 +172,7 @@
 }
 
 .services-title {
+    height: 36.36px;
     margin-left: 40px;
     margin-bottom: 14px;
     letter-spacing: 0.5px;
@@ -220,16 +221,17 @@
     word-spacing: -0.6px; */
     overflow: hidden;
     white-space: nowrap;
+    width: 219px;
 }
 
 .characteristic_element p {
     width: 219px;
     height: 92px;
-    margin-top: 10px;
+    margin-top: 9px;
     font-size: 12px;
     color: #767e9e;
     font-family: "Lato-Light";
-    line-height: 21px;
+    line-height: 22px;
     word-spacing: 3.2px;
     letter-spacing: 0.1px;
     font-weight: 600;
@@ -299,7 +301,7 @@
 
 .feel::after {
     content: url(./assets/image/services_feellike.svg);
-    top: 18px;
-    left: -65px;
+    top: 19px;
+    left: -66px;
     position: absolute;
 }
