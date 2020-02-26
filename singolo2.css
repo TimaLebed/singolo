@@ -33,6 +33,7 @@
 }
 
 .services-title {
+    width: 940px;
     height: 37px;
     font-size: 30px;
     color: #666d89;
@@ -103,8 +104,6 @@
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between;
-    align-content: space-between; */
 }
 
 .services-image__element {
@@ -183,4 +182,96 @@
     background-image: url(./assets/image/singolo2/bottom-4.png);
     background-position: 48% 25%;
     margin-bottom: 20px;
+}
+
+.about {
+    height: 734px;
+    background-color: #f2f2f2;
+    border-bottom: #ffffff solid 6px;
+    padding: 58px 0 0 40px;
+}
+
+.about-title {
+    font-size: 30px;
+    height: 30px;
+    width: 940px;
+    color: #666d89;
+    font-family: "Lato-Black";
+    overflow: hidden;
+    white-space: nowrap;
+    word-spacing: -1.1px;
+}
+
+.about-subtitle {
+    width: 940px;
+    height: 57px;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato-Regular";
+    letter-spacing: -0.2px;
+    word-spacing: 0.2px;
+    overflow: hidden;
+}
+
+.about-column {
+    margin: 46px 13px 0 0;
+    width: 303px;
+    height: 445px;
+    /* background-color: #3b3838; */
+    display: inline-block;
+}
+
+.about-column__title {
+    margin-top: 9px;
+    font-size: 18px;
+    height: 22px;
+    color: #767e9e;
+    font-family: "Lato-Black";
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
+    word-spacing: 0.9px;
+}
+
+.about-column__subtitle {
+    height: 39px;
+    margin-top: 9px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    letter-spacing: -0.2px;
+    word-spacing: 0.2px;
+    overflow: hidden;
+    color: #767e9e;
+    line-height: 21px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 26px 0 0 2px;
+}
+
+.socials a {
+    padding: 8px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.socials a::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    border: 1px solid #666d89;
+    position: absolute;
+    left: -3%;
+    top: 0;
+}
+
+.socials a:hover {
+    transform: scale(1.3);
 }
