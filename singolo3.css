@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "Lato-Regular";
+    src: url(./assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: "Lato-Bold";
+    src: url(./assets/fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: "Lato-Light";
+    src: url(./assets/fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: "Lato-Black";
+    src: url(./assets/fonts/Lato-Black.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main { 
+    width: 1020px;
+    margin: 0 auto;  
+}
+
+.quote {
+    height: 654px;
+    padding: 59px 0 0 40px;
+    background-color: #f06c64;
+    border-bottom: #ea676b 5px solid;
+}
+
+.qoute-wrapper {
+    display: flex;
+}
+
+.quote-title {
+    width: 940px;
+    height: 35px;
+    font-size: 30px;
+    color: #f0d8d9;
+    font-family: "Lato-Black";
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
+}
+
+.quote-subtitle {
+    width: 940px;
+    height: 57px;
+    margin: 19px 0 46px 0;
+    font-size: 18px;
+    line-height: 31px;
+    color: #f0d8d9;
+    font-family: "Lato-Light";
+    overflow: hidden;
+    letter-spacing: -0.1px;
+    word-spacing: 0.4px;
+}
+
+.form {
+    height: 365px;
+    width: 618px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text] {
+    margin-bottom: 15px;
+    padding-left: 13px;
+    border: 1px solid #d6564f;
+    width: 619px;
+    height: 39px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    color: #f48c8f;
+    line-height: 40px;
+    letter-spacing: 0.1px;
+    outline: none;
+}
+
+textarea::placeholder,
+input[type=text]::placeholder {
+    font-size: 12px;
+    color: #f48c8f;
+    font-family: "Lato-Regular";
+}
+
+textarea {
+    padding-top: 10px;
+    padding-left: 13px;
+    border: 1px solid #d6564f;
+    width: 619px;
+    height: 225px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    color: #f48c8f;
+    outline: none;
+    resize: none;
+}
+
+input[type=submit] {
+    width: 1px;
+    height: 1px;
+    border: 0;
+    background-color: #f06c64;
+}
+
+.quot-contact {
+    margin-left: 21px;
+    height: 200px;
+    width: 305px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quot-contact__title {
+    font-size: 18px;
+    line-height: 19px;
+    color: #f0d8d9;
+    font-family: "Lato-Black";
+    letter-spacing: 0.1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.quot-contact__subtitle {
+    margin-top: 10px;
+    width: 305px;
+    height: 105px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato-Regular";
+    overflow: hidden;
+}
+
+.quot-link {
+    margin-top: 7px;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    word-spacing: -0.4px;
+    /* line-height: 22px; */
+    color: #f0d8d9;
+    font-family: "Lato-Regular";
+    text-decoration: none;
+    margin-left: 24px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.quot-link:hover {
+    transform: translateX(10px);
+}
+
+.location::before {
+    content: '';
+    background-image: url(./assets/image/singolo3/pin.svg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1px;
+    left: -22px;
+    background-size: contain;
+}
+
+.tel::before {
+    content: '';
+    background-image: url(./assets/image/singolo3/phone-call.svg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: -22px;
+    background-size: contain;
+}
+
+.mail::before {
+    content: '';
+    background-image: url(./assets/image/singolo3/mail.svg);
+    display: block;
+    width: 14px;
+    height: 12px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2px;
+    left: -22px;
+    background-size: contain;
+}
