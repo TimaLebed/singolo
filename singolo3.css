@@ -236,7 +236,7 @@ input[type=submit]:hover {
     background-size: contain;
 }
 
-.socials {
+.socials-footer {
     display: flex;
     justify-content: space-between;
     width: 151px;
@@ -244,13 +244,13 @@ input[type=submit]:hover {
     margin-top: 5px;
 }
 
-.socials a {
+.socials-footer a {
     padding: 8px;
     position: relative;
     transition: all 0.3s;
 }
 
-.socials a::after {
+.socials-footer a::after {
     content: "";
     display: block;
     width: 30px;
@@ -262,6 +262,6 @@ input[type=submit]:hover {
     top: 0;
 }
 
-.socials a:hover {
+.socials-footer a:hover {
     transform: scale(1.3);
 }
