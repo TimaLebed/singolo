@@ -84,7 +84,7 @@
     display: none;
 }
 
-.header-navbar__link:hover {
+.header-active {
     color: #f06c64;
 }
 
