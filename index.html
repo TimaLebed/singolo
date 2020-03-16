@@ -86,8 +86,8 @@
                     <li><a href="#"></a>Artwork</a></li>
                 </ul>
             </nav>
-            <div class="portfolio-image">
-                <div class="portfolio-image__element"></div>
+            <div class="portfolio-image" id="portfolio-image">
+                <div class="portfolio-image__element portfolio-image-active"></div>
                 <div class="portfolio-image__element"></div>
                 <div class="portfolio-image__element"></div>
                 <div class="portfolio-image__element"></div>
@@ -142,12 +142,12 @@
             <h2 class="quote-title">Get a Quote</h2>
             <p class="quote-subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="qoute-wrapper">
-                <form action="mailto:vl@book.ru" method="POST" class="form">
-                    <input type="text" placeholder="Name (Required)" required maxlength="40">
-                    <input type="email" placeholder="Email (Required)" required maxlength="40">
-                    <input type="text" placeholder="Subject" maxlength="40">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Describe your project in detail..." maxlength="500"></textarea>
-                    <input type="submit" class="form-submit" value="Submit">
+                <form action="mailto:vl@book.ru" method="POST" class="form" id="form">
+                    <input type="text" placeholder="Name (Required)" required maxlength="40" id="name-input">
+                    <input type="email" placeholder="Email (Required)" required maxlength="40" id="email-input">
+                    <input type="text" placeholder="Subject" maxlength="40" id="subject-input">
+                    <textarea name="textarea-describe" cols="30" rows="10" placeholder="Describe your project in detail..." maxlength="500" id="textarea-input"></textarea>
+                    <input type="submit" class="form-submit" value="Submit" id="submit-input">
                 </form>
                 <div class="quot-contact">
                     <h3 class="quot-contact__title">Contact Information</h3>
@@ -158,9 +158,15 @@
                 </div>
             </div>
         </section>
+        <div class="modal hidden">
+            <p>Письмо отправлено</p>
+            <p id="modal-subject"></p>
+            <p id="modal-description"></p>
+            <button id="modal-button" class="modal-button">OK</button>
+        </div>
     </main>
     <footer class="footer">
-        <h3 class="copyright">&copy; Copyright 2013</h3>
+        <h3 class="copyright">Copyright 2013</h3>
         <div class="socials-footer">
             <a href="#"><img src="./assets/image/singolo3/facebook.svg" height="14" alt="facebook"></a>
             <a href="#"><img src="./assets/image/singolo3/google-plus-social-logotype.svg" height="14" alt="google"></a>
