@@ -15,18 +15,24 @@ const phoneVertical = document.querySelector('.phone-vertical');
 const phoneHorizontal = document.querySelector('.phone-horizontal');
 const verticalDisplayBlack = document.querySelector('.vertical-display-black');
 const horizontalDisplayBlack = document.querySelector('.horizontal-display-black');
+const portfolioNav = document.querySelector('.portfolio-nav');
+const portfolioNavElement = document.querySelectorAll('.portfolio-nav__element');
+const newPortfolioImages = [...portfolioImages];
+const sections = document.querySelectorAll('section');
+const inputForm = document.querySelectorAll("input");
+const inputFormArr = [...inputForm];
 
-headerNav.addEventListener('click', event => {
-    if (event.target.classList.contains('header-navbar__link')) {
-        links.forEach(el => el.classList.remove('header-active'));
-        event.target.classList.add('header-active');
-    }
-});
+// headerNav.addEventListener('click', event => {
+//     if (event.target.classList.contains('header-navbar__link')) {
+//         links.forEach(el => el.classList.remove('header-active'));
+//         event.target.classList.add('header-active');
+//     }
+// });
 
 portfolioImagesContainer.addEventListener('click', event => {
     if (event.target.classList.contains('portfolio-image__element')) {
-        portfolioImages.forEach(el => el.classList.remove('portfolio-image-active'));
-        event.target.classList.add('portfolio-image-active');
+    portfolioImages.forEach(el => el.classList.remove('portfolio-image-active'));
+    event.target.classList.add('portfolio-image-active');
     }
 });
 
@@ -44,6 +50,7 @@ form.addEventListener('submit', event => {
 
 modalButton.addEventListener('click', event => {
     modal.classList.add('hidden');
+    document.getElementById("form").reset();
 });
 
 phoneVertical.addEventListener('click', event => {
@@ -62,3 +69,29 @@ phoneHorizontal.addEventListener('click', event => {
     horizontalDisplayBlack.style.zIndex = horizontalDisplayZindex;
 });
 
+portfolioNav.addEventListener('click', event => {
+    if (event.target.classList.contains('portfolio-nav__element')) {
+        portfolioNavElement.forEach(el => el.classList.remove('portfolio-nav-active'));
+        event.target.classList.add('portfolio-nav-active');
+        newPortfolioImages.forEach(e => portfolioImagesContainer.removeChild(e));
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+        shuffle(newPortfolioImages);  
+        newPortfolioImages.forEach(e => portfolioImagesContainer.appendChild(e));
+    }
+});
+
+document.addEventListener('scroll', event => {
+    const currentPosition = window.scrollY;
+    sections.forEach(el => {
+        if (el.offsetTop <= currentPosition && (el.offsetTop + el.offsetHeight) > currentPosition) {
+            links.forEach(a => {
+                a.classList.remove('header-active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('header-active');
+                }
+            });
+        }
+    });
+});
