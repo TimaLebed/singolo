@@ -1,0 +1,28 @@
+const Selectors = {
+    headerNav: document.querySelector('#header-nav'),
+    links: document.querySelectorAll('.header-navbar__link'),
+    portfolioImages: document.querySelectorAll('.portfolio-image__element'),
+    portfolioImagesContainer: document.querySelector('.portfolio-image'),
+    form: document.querySelector('#form'),
+    subjectInput: document.querySelector('#subject-input'),
+    textareaInput: document.querySelector('#textarea-input'),
+    modalSubjectText: document.querySelector('#modal-subject'),
+    modalDescriptionText: document.querySelector('#modal-description'),
+    modalButton: document.querySelector('#modal-button'),
+    modal: document.querySelector('.modal'),
+    phoneVerticalDisplay: document.querySelector('.phone-vertical-display'),
+    phoneHorizontalDisplay: document.querySelector('.phone-horizontal-display'),
+    phoneVertical: document.querySelector('.phone-vertical'),
+    phoneHorizontal: document.querySelector('.phone-horizontal'),
+    verticalDisplayBlack: document.querySelector('.vertical-display-black'),
+    horizontalDisplayBlack: document.querySelector('.horizontal-display-black'),
+    portfolioNav: document.querySelector('.portfolio-nav'),
+    portfolioNavElement: document.querySelectorAll('.portfolio-nav__element'),
+    sections: document.querySelectorAll('section'),
+    inputForm: document.querySelectorAll('input'),
+    newPortfolioImages: Array.from(portfolioImages),
+    inputFormArr: Array.from(inputForm),
+    shuffle: arr => arr.sort(() => Math.random() - 0.5),
+};
+
+module.exports = Selectors;
