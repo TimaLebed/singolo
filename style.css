@@ -108,18 +108,35 @@ body, html {
     align-items: center;
     justify-content: center; */
     height: 607px;
-    background-color: #f06c64;
     border-top: #323746 7px solid;
     border-bottom: #ea676b 7px solid;
     position: relative;
+    overflow: hidden;
 }
 
-.wrapper-slider-1 {
+.wrapper-slider {
     height: 607px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+}
+
+.wrapper-next,
+.wrapper-active {
+    display: flex;
+}
+
+.wrapper-next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.back-slider-1 {
+    background-color: #f06c64;
 }
 
 .phone-vertical {
@@ -175,13 +192,8 @@ body, html {
     z-index: 1;
 }
 
-.wrapper-slider-2 {
-    height: 607px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.back-slider-2 {
     background-color: #648BF0;
-    position: relative;
 }
 
 .inner-slider-2 {
@@ -203,6 +215,7 @@ body, html {
     left: 37px;
     padding: 5px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .slider-right {
@@ -211,6 +224,43 @@ body, html {
     right: 35px;
     padding: 5px;
     transition: all 0.3s;
+    cursor: pointer;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;    
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;    
+    }
+    to {
+        left: 0;
+    }
 }
 
 .slider-left:hover,
@@ -910,5 +960,7 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-
+.display-none {
+    display: none;
+}
 

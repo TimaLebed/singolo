@@ -19,9 +19,13 @@ const portfolioNav = document.querySelector('.portfolio-nav');
 const portfolioNavElement = document.querySelectorAll('.portfolio-nav__element');
 const sections = document.querySelectorAll('section');
 const inputForm = document.querySelectorAll('input');
+const wrapperSlider = document.querySelectorAll('.wrapper-slider');
+const sliderLeft = document.querySelector('.slider-left');
+const sliderRight = document.querySelector('.slider-right');
+const shuffle = arr => arr.sort(() => Math.random() - 0.5);
 const newPortfolioImages = Array.from(portfolioImages);
 const inputFormArr = Array.from(inputForm);
-const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+let currentWrapperSlider = 0;
 
 const portfolioImagesEvent = event => {
   if (event.target.classList.contains('portfolio-image__element')) {
@@ -65,11 +69,11 @@ const phoneHorizontalEvent = event => {
 
 const portfolioNavEvent = event => {
   if (event.target.classList.contains('portfolio-nav__element')) {
-      portfolioNavElement.forEach(el => el.classList.remove('portfolio-nav-active'));
-      event.target.classList.add('portfolio-nav-active');
-      newPortfolioImages.forEach(el => portfolioImagesContainer.removeChild(el));
-      shuffle(newPortfolioImages);  
-      newPortfolioImages.forEach(el => portfolioImagesContainer.appendChild(el));
+    portfolioNavElement.forEach(el => el.classList.remove('portfolio-nav-active'));
+    event.target.classList.add('portfolio-nav-active');
+    newPortfolioImages.forEach(el => portfolioImagesContainer.removeChild(el));
+    shuffle(newPortfolioImages);  
+    newPortfolioImages.forEach(el => portfolioImagesContainer.appendChild(el));
   }
 };
 
@@ -78,7 +82,7 @@ const scrollNavEvent = event => {
 
   sections.forEach(el => {
     if (el.offsetTop <= currentPosition && (el.offsetTop + el.offsetHeight) > currentPosition) {
-        links.forEach(el => {
+      links.forEach(el => {
         el.classList.remove('header-active');
 
         if (el.getAttribute('id') === el.getAttribute('href').substring(1)) {
@@ -89,23 +93,64 @@ const scrollNavEvent = event => {
   });
 };
 
+const hideLeftArrow = () => sliderLeft.classList.add('display-none');
+
+const showLeftArrow = () => sliderLeft.classList.remove('display-none');
+
+const hideRightArrow = () => sliderRight.classList.add('display-none');
+
+const showRightArrow = () => sliderRight.classList.remove('display-none');
+
+const changeCurrentWrapperSlider = n =>
+  currentWrapperSlider = (n + wrapperSlider.length) % wrapperSlider.length;
+
+const hideWrapperSlider = direction => {
+  wrapperSlider[currentWrapperSlider].classList.add(direction);
+  wrapperSlider[currentWrapperSlider].addEventListener('animationend', function() {
+    this.classList.remove('wrapper-active', direction);
+  });
+};
+
+const showWrapperSlider = direction => {
+  wrapperSlider[currentWrapperSlider].classList.add('wrapper-next', direction);
+  wrapperSlider[currentWrapperSlider].addEventListener('animationend', function() {
+    this.classList.remove('wrapper-next', direction);
+    this.classList.add('wrapper-active');
+
+    if (sliderLeft.classList.contains('display-none')) {
+      showLeftArrow();
+    }
+
+    if (sliderRight.classList.contains('display-none')) {
+      showRightArrow();
+    }
+  });
+};
+
+const previousSlider = n => {
+  hideLeftArrow();
+  hideWrapperSlider('to-right');
+  changeCurrentWrapperSlider(n - 1);
+  showWrapperSlider('from-left');
+};
+
+const nextSlider = n => {
+  hideRightArrow();
+  hideWrapperSlider('to-left');
+  changeCurrentWrapperSlider(n + 1);
+  showWrapperSlider('from-right');
+};
+
 const initEvents = () => {
-    portfolioImagesContainer.addEventListener('click', portfolioImagesEvent);
-    form.addEventListener('submit', formEvent);
-    modalButton.addEventListener('click', modalButtonEvent);
-    phoneVertical.addEventListener('click', phoneVerticalEvent);
-    phoneHorizontal.addEventListener('click', phoneHorizontalEvent);
-    portfolioNav.addEventListener('click', portfolioNavEvent);
-    document.addEventListener('scroll', scrollNavEvent);
+  portfolioImagesContainer.addEventListener('click', portfolioImagesEvent);
+  form.addEventListener('submit', formEvent);
+  modalButton.addEventListener('click', modalButtonEvent);
+  phoneVertical.addEventListener('click', phoneVerticalEvent);
+  phoneHorizontal.addEventListener('click', phoneHorizontalEvent);
+  portfolioNav.addEventListener('click', portfolioNavEvent);
+  document.addEventListener('scroll', scrollNavEvent);
+  sliderLeft.addEventListener('click', () => previousSlider(currentWrapperSlider));
+  sliderRight.addEventListener('click', () => nextSlider(currentWrapperSlider));
 };
 
 document.addEventListener('DOMContentLoaded', initEvents);
-
-
-
-// headerNav.addEventListener('click', event => {
-//     if (event.target.classList.contains('header-navbar__link')) {
-//         links.forEach(el => el.classList.remove('header-active'));
-//         event.target.classList.add('header-active');
-//     }
-// });
