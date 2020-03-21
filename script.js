@@ -80,13 +80,13 @@ const portfolioNavEvent = event => {
 const scrollNavEvent = event => {
   const currentPosition = window.scrollY;
 
-  sections.forEach(el => {
-    if (el.offsetTop <= currentPosition && (el.offsetTop + el.offsetHeight) > currentPosition) {
-      links.forEach(el => {
-        el.classList.remove('header-active');
+  sections.forEach(section => {
+    if (section.offsetTop <= currentPosition && (section.offsetTop + section.offsetHeight) > currentPosition) {
+      links.forEach(link => {
+        link.classList.remove('header-active');
 
-        if (el.getAttribute('id') === el.getAttribute('href').substring(1)) {
-          el.classList.add('header-active');
+        if (section.getAttribute('id') === link.getAttribute('href').substring(1)) {
+          link.classList.add('header-active');
         }
       });
     }
