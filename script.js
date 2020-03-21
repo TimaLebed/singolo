@@ -22,6 +22,7 @@ const inputForm = document.querySelectorAll('input');
 const wrapperSlider = document.querySelectorAll('.wrapper-slider');
 const sliderLeft = document.querySelector('.slider-left');
 const sliderRight = document.querySelector('.slider-right');
+const headerHeight = document.querySelector('.header').offsetHeight;
 const shuffle = arr => arr.sort(() => Math.random() - 0.5);
 const newPortfolioImages = Array.from(portfolioImages);
 const inputFormArr = Array.from(inputForm);
@@ -78,7 +79,7 @@ const portfolioNavEvent = event => {
 };
 
 const scrollNavEvent = event => {
-  const currentPosition = window.scrollY;
+  const currentPosition = window.scrollY + headerHeight;
 
   sections.forEach(section => {
     if (section.offsetTop <= currentPosition && (section.offsetTop + section.offsetHeight) > currentPosition) {
@@ -91,6 +92,21 @@ const scrollNavEvent = event => {
       });
     }
   });
+};
+
+const headerNavEvent = event => {
+  event.preventDefault();
+
+  if (event.target.classList.contains('header-navbar__link')) {
+    const sectionId = event.target.getAttribute('href').substring(1);
+    const sectionYPosition = document.querySelector(`#${sectionId}`).getBoundingClientRect().top + window.pageYOffset;
+    const topPosition = sectionYPosition - headerHeight + 2;
+
+    window.scrollTo({
+      top: topPosition,
+      behavior: 'smooth',
+    });
+  }
 };
 
 const hideLeftArrow = () => sliderLeft.classList.add('display-none');
@@ -149,6 +165,7 @@ const initEvents = () => {
   phoneHorizontal.addEventListener('click', phoneHorizontalEvent);
   portfolioNav.addEventListener('click', portfolioNavEvent);
   document.addEventListener('scroll', scrollNavEvent);
+  headerNav.addEventListener('click', headerNavEvent);
   sliderLeft.addEventListener('click', () => previousSlider(currentWrapperSlider));
   sliderRight.addEventListener('click', () => nextSlider(currentWrapperSlider));
 };

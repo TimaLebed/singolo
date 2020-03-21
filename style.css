@@ -268,20 +268,11 @@ body, html {
     transform: scale(1.4);
 }
 
-/* .services {
+.services {
     height: 499px;
     background-color: #f1f1f1;
     border-bottom: #ffffff 6px solid;
     padding-top: 59px;
-} */
-
-.services {
-    background-color: #f1f1f1;
-    border-bottom: #ffffff 6px solid;
-    padding-top: 59px;
-    height: 562px;
-    padding-top: 122px;
-    margin-top: -63px;
 }
 
 .services-title {
@@ -424,13 +415,20 @@ body, html {
     border-bottom: #323746 solid 6px;
 } */
 
-.portfolio {
+/* .portfolio {
     background-color: #2d303a;
     border-bottom: #323746 solid 6px;
     height: 944px;
     margin-top: -58px;
     padding-top: 73px;
     background-clip: content-box;
+} */
+
+.portfolio {
+    padding: 60px 0 0 40px;
+    height: 871px;
+    background-color: #2d303a;
+    border-bottom: #323746 solid 6px;
 }
 
 .portfolio-title {
@@ -442,8 +440,6 @@ body, html {
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: 0.2px;
-    margin-left: 40px;
-    margin-top: 60px;
 }
 
 .portfolio-subtitle {
@@ -457,11 +453,9 @@ body, html {
     letter-spacing: -0.3px;
     word-spacing: -0.2px;
     overflow: hidden;
-    margin-left: 40px;
 }
 
 .portfolio-nav ul {
-    margin-left: 40px;
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
@@ -502,7 +496,6 @@ body, html {
 }
 
 .portfolio-image {
-    margin-left: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -582,19 +575,13 @@ body, html {
 }
 
 .about {
-    /* height: 734px; */
+    height: 734px;
     background-color: #f2f2f2;
     border-bottom: #ffffff solid 6px;
-    /* padding: 58px 0 0 40px; */
-    height: 797px;
-    margin-top: -48px;
-    padding-top: 48px;
-    background-clip: content-box;
+    padding: 58px 0 0 40px;
 }
 
 .about-title {
-    margin-top: 58px;
-    margin-left: 40px;
     font-size: 30px;
     height: 30px;
     width: 940px;
@@ -606,7 +593,6 @@ body, html {
 }
 
 .about-subtitle {
-    margin-left: 40px;
     width: 940px;
     height: 57px;
     margin-top: 25px;
@@ -625,10 +611,6 @@ body, html {
     height: 445px;
     /* background-color: #3b3838; */
     display: inline-block;
-}
-
-.about-column:nth-child(1) {
-    margin-left: 40px;
 }
 
 .about-column img {
@@ -691,24 +673,17 @@ body, html {
 }
 
 .quote {
-    /* height: 654px; */
-    /* padding: 59px 0 0 40px; */
+    height: 654px;
+    padding: 59px 0 0 40px;
     background-color: #f06c64;
     border-bottom: #ea676b 5px solid;
-    height: 713px;
-    margin-top: -69px;
-    padding-top: 59px;
-    background-clip: content-box;
 }
 
 .qoute-wrapper {
     display: flex;
-    margin-left: 40px;
 }
 
 .quote-title {
-    margin-left: 40px;
-    margin-top: 59px;
     width: 940px;
     height: 35px;
     font-size: 30px;
@@ -723,7 +698,6 @@ body, html {
     width: 940px;
     height: 57px;
     margin: 19px 0 46px 0;
-    margin-left: 40px;
     font-size: 18px;
     line-height: 31px;
     color: #f0d8d9;
