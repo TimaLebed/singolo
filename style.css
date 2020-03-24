@@ -1235,4 +1235,150 @@ input[type=submit]:hover {
     .main {
         margin-top: 71px;
     }
+
+    .slider {
+        height: 218.38px;
+        border-top: 0;
+        border-bottom: #ea676b 2.2px solid;
+    }
+
+    .phone-vertical {
+        width: 88.3px;
+        height: 177.61px;
+        background-image: url(./assets/image/phone-vertical-shadow-mobile.png);
+    }
+
+    .phone-vertical-wrapper {
+        width: 79.28px;
+        height: 168.1px;
+    }
+
+    .phone-vertical-display {
+        width: 71px;
+        height: 124px;
+        top: 23px;
+        left: 4px;
+    }
+
+    .vertical-display-black {
+        width: 71px;
+        height: 124px;
+        top: 23px;
+        left: 4px;
+    }   
+
+    .phone-horizontal {
+        margin-right: 0;
+        margin-left: 20.5px;
+        height: 88.3px;
+        width: 177.61px;
+        background-image: url(./assets/image/phone-horizontal-shadow-mobile.png);
+    }
+
+    .phone-horizontal-wrapper {
+        height: 79.28px;
+        width: 168.1px;
+    }
+
+    .phone-horizontal-display {
+        height: 71px;
+        width: 124px;
+        top: 4px;
+        left: 22px;    
+    }
+
+    .horizontal-display-black {
+        height: 71px;
+        width: 124px;
+        top: 4px;
+        left: 22px;    
+    }
+
+    .slider-right {
+        right: 10px;
+    }
+
+    .slider-left {
+        left: 10px;
+    }
+
+    .inner-slider-2 {
+        width: 189px;
+    }
+
+    .phone-slider-2 {
+        width: 88px;
+    }
+
+    .phone-back-slide-2 {
+        width: 58px;
+    }
+
+    .services {
+        height: 1032px;
+    }
+
+    .services-title {
+        margin-bottom: 18px;
+    }
+
+    .services-subtitle {
+        min-height: 99px;
+        max-height: 214px;
+        height: 100%;
+    }
+
+    .services-characteristic {
+        width: 176px;
+        margin-top: 10px;
+        height: 700px;
+    }
+
+    .services-characteristic__column {
+        width: 225px;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .characteristic_element {
+        margin-bottom: 15px;
+    }
+
+    .portfolio {
+        height: 844px;
+        border-bottom: 0;
+        padding-top: 40px;
+    }
+
+    .portfolio-title {
+        margin-left: 30px;
+    }
+
+    .portfolio-subtitle {
+        width: 80%;
+        margin-left: 30px;
+        margin-top: 14px;
+        height: 81px;
+    }
+
+    .portfolio-nav ul {
+        margin-top: 22px;
+        margin-left: 30px;
+    }
+
+    .portfolio-image {
+        margin-left: 30px;
+        width: 315px;
+        height: 553px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 14px;
+        margin: 28px auto 0;
+    }
+
+    .portfolio-image__element {
+        width: 151px;
+        height: 128px;
+    }
+
 }
