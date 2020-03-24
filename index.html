@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="header">
         <div class="header-wrapper">
+            <div class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
             <h1 class="header-title">singolo<span>*</span></h1>
             <nav class="header-navbar" id="header-nav">
                 <a href="#home" class="header-navbar__link header-active">home</a>
@@ -23,20 +28,20 @@
         <section class="slider" id="home">
             <div class="wrapper-slider back-slider-1 wrapper-active">
                 <div class="phone-vertical">
-                    <img src="./assets/image/phone.png" alt="Phone-img" id="phone-vertical" class="cursor-pointer">
+                    <img src="./assets/image/phone.png" alt="Phone-img" id="phone-vertical" class="phone-vertical-wrapper cursor-pointer">
                     <img src="./assets/image/image-inner-vertical.png" alt="phone-display" class="phone-vertical-display cursor-pointer">
                     <div class="vertical-display-black cursor-pointer"></div>
                 </div>   
                 <div class="phone-horizontal">
-                    <img src="./assets/image/phone-horiz.png" alt="Phone-img" id="phone-horizontal" class="cursor-pointer">
+                    <img src="./assets/image/phone-horiz.png" alt="Phone-img" id="phone-horizontal" class="phone-horizontal-wrapper cursor-pointer">
                     <img src="./assets/image/image-inner-gorizont.png" alt="phone-display" class="phone-horizontal-display cursor-pointer">
                     <div class="horizontal-display-black cursor-pointer"></div>
                 </div>
             </div>
             <div class="wrapper-slider back-slider-2">
                 <div class="inner-slider-2">
-                    <img src="./assets/image/phone-back-slide2.png" alt="Phone-img">
-                    <img src="./assets/image/phone-back-slide2.png" alt="Phone-img">
+                    <img src="./assets/image/phone-back-slide2.png" alt="Phone-img" class="phone-back-slide-2">
+                    <img src="./assets/image/phone-back-slide2.png" alt="Phone-img" class="phone-back-slide-2">
                 </div>
                 <img src="./assets/image/phone-content-slide2.png" class="phone-slider-2" alt="Phone-img">
             </div>
@@ -113,37 +118,39 @@
         <section class="about" id="about">
             <h2 class="about-title">About Us</h2>
             <p class="about-subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="about-column">
-                <img src="./assets/image/singolo2/about-column-left.png" alt="img">
-                <h2 class="about-column__title">Adam Jensen</h2>
-                <p class="about-column__subtitle">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-                <div class="socials">
-                    <a href="#"><img src="./assets/image/singolo2/facebook.svg" height="14" alt="facebook"></a>
-                    <a href="#"><img src="./assets/image/singolo2/google-plus-social-logotype.svg" height="14" alt="google"></a>
-                    <a href="#"><img src="./assets/image/singolo2/twitter.svg" height="16" alt="twitter"></a>
-                    <a href="#"><img src="./assets/image/singolo2/linkedin.svg" height="14" alt="linkedin"></a>
+            <div class="about-column-wrapper">
+                <div class="about-column">
+                    <img src="./assets/image/singolo2/about-column-left.png" alt="img">
+                    <h2 class="about-column__title">Adam Jensen</h2>
+                    <p class="about-column__subtitle">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                    <div class="socials">
+                        <a href="#"><img src="./assets/image/singolo2/facebook.svg" height="14" alt="facebook"></a>
+                        <a href="#"><img src="./assets/image/singolo2/google-plus-social-logotype.svg" height="14" alt="google"></a>
+                        <a href="#"><img src="./assets/image/singolo2/twitter.svg" height="16" alt="twitter"></a>
+                        <a href="#"><img src="./assets/image/singolo2/linkedin.svg" height="14" alt="linkedin"></a>
+                    </div>
                 </div>
-            </div>
-            <div class="about-column">
-                <img src="./assets/image/singolo2/about-column-center.png" alt="img">
-                <h2 class="about-column__title">Desmond Miles</h2>
-                <p class="about-column__subtitle">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-                <div class="socials">
-                    <a href="#"><img src="./assets/image/singolo2/facebook.svg" height="14" alt="facebook"></a>
-                    <a href="#"><img src="./assets/image/singolo2/google-plus-social-logotype.svg" height="14" alt="google"></a>
-                    <a href="#"><img src="./assets/image/singolo2/twitter.svg" height="16" alt="twitter"></a>
-                    <a href="#"><img src="./assets/image/singolo2/linkedin.svg" height="14" alt="linkedin"></a>
+                <div class="about-column">
+                    <img src="./assets/image/singolo2/about-column-center.png" alt="img">
+                    <h2 class="about-column__title">Desmond Miles</h2>
+                    <p class="about-column__subtitle">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                    <div class="socials">
+                        <a href="#"><img src="./assets/image/singolo2/facebook.svg" height="14" alt="facebook"></a>
+                        <a href="#"><img src="./assets/image/singolo2/google-plus-social-logotype.svg" height="14" alt="google"></a>
+                        <a href="#"><img src="./assets/image/singolo2/twitter.svg" height="16" alt="twitter"></a>
+                        <a href="#"><img src="./assets/image/singolo2/linkedin.svg" height="14" alt="linkedin"></a>
+                    </div>
                 </div>
-            </div>
-            <div class="about-column">
-                <img src="./assets/image/singolo2/about-column-right.png" alt="img">
-                <h2 class="about-column__title">Scolara Visari</h2>
-                <p class="about-column__subtitle">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-                <div class="socials">
-                    <a href="#"><img src="./assets/image/singolo2/facebook.svg" height="14" alt="facebook"></a>
-                    <a href="#"><img src="./assets/image/singolo2/google-plus-social-logotype.svg" height="14" alt="google"></a>
-                    <a href="#"><img src="./assets/image/singolo2/twitter.svg" height="16" alt="twitter"></a>
-                    <a href="#"><img src="./assets/image/singolo2/linkedin.svg" height="14" alt="linkedin"></a>
+                <div class="about-column">
+                    <img src="./assets/image/singolo2/about-column-right.png" alt="img">
+                    <h2 class="about-column__title">Scolara Visari</h2>
+                    <p class="about-column__subtitle">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                    <div class="socials">
+                        <a href="#"><img src="./assets/image/singolo2/facebook.svg" height="14" alt="facebook"></a>
+                        <a href="#"><img src="./assets/image/singolo2/google-plus-social-logotype.svg" height="14" alt="google"></a>
+                        <a href="#"><img src="./assets/image/singolo2/twitter.svg" height="16" alt="twitter"></a>
+                        <a href="#"><img src="./assets/image/singolo2/linkedin.svg" height="14" alt="linkedin"></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -160,7 +167,7 @@
                 </form>
                 <div class="quot-contact">
                     <h3 class="quot-contact__title">Contact Information</h3>
-                    <p class="quot-contact__subtitle">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                    <p class="quot-contact__subtitle">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                     <a href="#" class="quot-link location">Elm St. 14/05 Lost City </a>
                     <a href="tel:03528 331 86 35" class="quot-link tel">03528 331 86 35</a>
                     <a href="mailto:info@singolo.com" class="quot-link mail">info@singolo.com</a>

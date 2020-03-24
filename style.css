@@ -28,7 +28,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1020px;
+    /* width: 1020px; */
     height: 88px;
     margin: 0 auto;
     background-color: #2d303a;
@@ -37,14 +37,40 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
+    max-width: 1020px;
+    width: 100%;
 }
 
 .header-wrapper {
+    width: 92.15%;
     display: flex;
     justify-content: space-between;
-    width: 940px;
+    /* width: 940px; */
     align-items: baseline;
+    position: relative;
 }
+
+.hamburger {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2.4px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+
 
 .header-title {
     font-size: 25px;
@@ -98,7 +124,7 @@ body, html {
 }
 
 .main { 
-    width: 1020px;
+    max-width: 1020px;
     margin: 0 auto;  
     margin-top: 88px;
 }
@@ -112,10 +138,12 @@ body, html {
     border-bottom: #ea676b 7px solid;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .wrapper-slider {
-    height: 607px;
+    max-height: 607px;
+    height: 100%;
     /* display: flex; */
     align-items: center;
     justify-content: center;
@@ -605,12 +633,16 @@ body, html {
     overflow: hidden;
 }
 
+.about-column-wrapper {
+    display: flex;
+}
+
 .about-column {
     margin: 47px 15px 0 0;
     width: 301px;
     height: 445px;
     /* background-color: #3b3838; */
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .about-column img {
@@ -938,3 +970,269 @@ input[type=submit]:hover {
     display: none;
 }
 
+@media (max-width: 1019px) {
+    .slider {
+        max-height: 457px;
+    }
+
+    .phone-vertical {
+        width: 181px;
+        height: 363px;
+        background-image: url(./assets/image/phone-vertical-shadow-tablet.png);
+    }
+
+    .phone-vertical-wrapper {
+        width: 162.36px;
+        height: 344.26px;
+    }
+
+    .phone-vertical-display {
+        width: 146px;
+        height: 255px;
+        top: 47px;
+        left: 9px;
+    }
+
+    .vertical-display-black {
+        width: 146px;
+        height: 255px;
+        top: 47px;
+        left: 9px;
+    }
+
+    .phone-horizontal {
+        height: 181px;
+        width: 363px;
+        background-image: url(./assets/image/phone-horizontal-shadow-tablet.png);
+    }
+
+    .phone-horizontal-wrapper {
+        height: 162.36px;
+        width: 344.26px;
+    }
+
+    .phone-horizontal-display {
+        height: 146px;
+        width: 255px;
+        top: 8px;
+        left: 43px;
+    }
+
+    .horizontal-display-black {
+        height: 146px;
+        width: 255px;
+        top: 8px;
+        left: 43px;
+    }
+
+    .slider-right {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 26.86px;
+    }
+
+    .slider-left {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 26.86px;
+    }
+
+    .inner-slider-2 {
+        width: 328px;
+    }
+
+    .phone-back-slide-2 {
+        width: 100px;
+    }
+
+    .phone-slider-2 {
+        width: 158px;
+    }
+
+    .services {
+        height: 675px;
+        padding-top: 40px;
+        border-bottom: 0;
+        padding-left: 40px;
+    }
+
+    .services-title {
+        margin-left: 0;
+    }
+
+    .services-subtitle {
+        width: 89.5%;
+        height: 99px;
+        margin-left: 0;
+    }
+
+    .services-characteristic {
+        width: 573px;
+        height: 377px;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 28px;
+    }
+
+    .services-characteristic__column {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 39px;
+    }
+
+    .characteristic_element p {
+        width: 220px;
+        height: 77px;
+        margin-top: 7px;
+    }
+
+    .portfolio {
+        height: 1102px;
+        padding-left: 0;
+    }
+
+    .portfolio-title {
+        margin-left: 40px;
+    }
+
+    .portfolio-subtitle {
+        margin-left: 40px;
+        width: 89.0%;
+        height: 60px;
+    }
+
+    .portfolio-nav ul {
+        margin-left: 40px;
+    }
+
+    .portfolio-image {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 700px;
+        height: 794px;
+        margin-left: 40px;
+        margin-top: 28px;
+    }
+
+    .about {
+        min-height: 669px;
+        max-height: 734px;
+        height: 100%;
+        padding: 52px 40px 20px 40px;
+        border-bottom: 0;
+    }
+
+    .about-subtitle {
+        width: 95%;
+        height: 100px;
+    }
+
+    .about-column-wrapper {
+        height: 475px;
+        max-width: 941px;
+        width: 100%;
+    }
+
+    .about-column {
+        margin-top: 28px;
+        margin-right: 1.9%;
+        max-width: 301px;
+        width: 100%;
+    }
+
+    .about-column:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .about-column__subtitle {
+        height: 72px;
+    }
+
+    .socials {
+        margin-top: 5px;
+    }
+
+    .quote {
+        height: 631px;
+        padding-top: 53px;
+        padding-right: 40px;
+    }
+
+    .quote-subtitle {
+        width: 100%;
+        height: 96px;
+        margin-bottom: 19px;
+    }
+
+    .form {
+        min-width: 442px;
+        max-width: 618px;
+        width: 100%;
+    }
+
+    input[type=email],
+    input[type=text] {
+        margin-bottom: 11px;
+        min-width: 442px;
+        max-width: 619px;
+        width: 100%;
+    }
+
+    .form-submit {
+        width: 70px;
+    }
+
+    textarea {
+        min-width: 442px;
+        max-width: 619px;
+        width: 100%;
+        height: 159px;
+    }
+
+    .quot-contact {
+        margin-left: 29px;
+    }
+
+    .quot-contact__subtitle {
+        min-width: 221px;
+        max-width: 303px;
+        width: 100%;
+        height: 130px;
+        margin-top: 6px;
+    }
+
+    .footer {
+        max-width: 1020px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .header {
+        max-height: 71px;
+    }
+
+    .header-wrapper {
+        justify-content: center;
+    }
+
+    .header-title {
+        font-size: 19.6875px;
+    }
+
+    .header-navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .main {
+        margin-top: 71px;
+    }
+}
