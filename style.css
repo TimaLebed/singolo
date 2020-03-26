@@ -318,17 +318,18 @@ body, html {
 }
 
 .services-subtitle {
-    margin: 18px 0 0 40px;
+    /* margin: 18px 0 0 40px; */
+    margin: 18px 40px 0 40px;
     word-spacing: 0.4px;
     letter-spacing: -0.1px;
-    width: 940px;
-    height: 57px;
+    /* width: 940px;
+    height: 57px; */
     line-height: 30px;
     color: #767e9e;
     /* font-family: "Lato-Regular"; */
     font-family: "Lato-Light";
     font-size: 18px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .services-characteristic {
@@ -621,8 +622,8 @@ body, html {
 }
 
 .about-subtitle {
-    width: 940px;
-    height: 57px;
+    /* width: 940px;
+    height: 57px; */
     margin-top: 25px;
     font-size: 18px;
     line-height: 30px;
@@ -631,6 +632,7 @@ body, html {
     letter-spacing: -0.2px;
     word-spacing: 0.2px;
     overflow: hidden;
+    text-align: justify;
 }
 
 .about-column-wrapper {
@@ -1051,9 +1053,10 @@ input[type=submit]:hover {
 
     .services {
         height: 675px;
-        padding-top: 40px;
+        padding: 40px 40px 0 40px;
+        /* padding-top: 40px; */
         border-bottom: 0;
-        padding-left: 40px;
+        /* padding-left: 40px; */
     }
 
     .services-title {
@@ -1061,23 +1064,26 @@ input[type=submit]:hover {
     }
 
     .services-subtitle {
-        width: 89.5%;
-        height: 99px;
+        width: 100%;
         margin-left: 0;
+        text-align: justify;
+        /* height: 99px; */
     }
 
     .services-characteristic {
-        width: 573px;
+        width: 526px;
         height: 377px;
         flex-direction: column;
         margin: 0 auto;
-        margin-top: 28px;
+        margin-top: 36px;
+        /* margin-left: 12%; */
     }
 
     .services-characteristic__column {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 39px;
+        width: 573px;
     }
 
     .characteristic_element p {
@@ -1103,6 +1109,7 @@ input[type=submit]:hover {
 
     .portfolio-nav ul {
         margin-left: 40px;
+        margin-top: 12px;
     }
 
     .portfolio-image {
@@ -1123,17 +1130,19 @@ input[type=submit]:hover {
     }
 
     .about-subtitle {
-        width: 95%;
-        height: 100px;
+        /* width: 95%;
+        height: 100px; */
+        margin-bottom: 11px;
     }
 
     .about-column-wrapper {
-        height: 475px;
+        height: 444px;
         max-width: 941px;
         width: 100%;
     }
 
     .about-column {
+        height: 380px;
         margin-top: 28px;
         margin-right: 1.9%;
         max-width: 301px;
@@ -1144,8 +1153,13 @@ input[type=submit]:hover {
         margin-right: 0;
     }
 
+    .about-column__title {
+        margin-top: 9px;
+    }
+
     .about-column__subtitle {
         height: 72px;
+        margin-top: 0px;
     }
 
     .socials {
@@ -1222,14 +1236,61 @@ input[type=submit]:hover {
 
     .header-title {
         font-size: 19.6875px;
+        z-index: 1;
     }
 
     .header-navbar {
+        position: absolute;
+        width: 278px;
+        height: 100vh;
+        top: -101%;
+        left: -4.25%;
+        background-color: #2D303A;
+        display: none;
+        /* transform: translateX(-100%); */
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 71px;
+        box-shadow: 150px 0px 0px 500px rgba(0, 0, 0, 0.4);
+        /* transition: all 0.4s; */
+        /* transition-duration: 0.4s; */
+    }
+
+    .header-navbar.wrapper-active {
+        display: flex;
+        animation: showBlock 0.4s linear forwards;
+    }
+    
+    @keyframes showBlock {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .header-navbar__link {
+        font-size: 24px;
+        margin-top: 27px;
+    }
+    .header-navbar__link:nth-child(1) {
+        margin: 0;
+    }
+
+    .header-navbar__link::after {
         display: none;
     }
 
     .hamburger {
         display: flex;
+        z-index: 1;
+        transition: 0.4s all;
+    }
+
+    .hamburger-rotate {
+        transform: rotate(90deg);
+        transform-origin: 70% 30%;
     }
 
     .main {
@@ -1316,6 +1377,7 @@ input[type=submit]:hover {
 
     .services {
         height: 1032px;
+        padding: 30px 30px 0 30px;
     }
 
     .services-title {
@@ -1324,13 +1386,13 @@ input[type=submit]:hover {
 
     .services-subtitle {
         min-height: 99px;
-        max-height: 214px;
-        height: 100%;
+        width: 100%;
+        text-align: justify;
     }
 
     .services-characteristic {
-        width: 176px;
-        margin-top: 10px;
+        width: 150px;
+        margin-top: 26px;
         height: 700px;
     }
 
@@ -1357,7 +1419,7 @@ input[type=submit]:hover {
     .portfolio-subtitle {
         width: 80%;
         margin-left: 30px;
-        margin-top: 14px;
+        margin-top: 23px;
         height: 81px;
     }
 
@@ -1383,16 +1445,10 @@ input[type=submit]:hover {
 
     .about {
         min-height: 1754px;
-        padding: 0;
-        padding-top: 36px;
-    }
-
-    .about-title {
-        margin-left: 30px;
+        padding: 36px 30px 0 30px;
     }
 
     .about-subtitle {
-        margin-left: 30px;
         height: 203px;
         width: 83%;
         margin-bottom: 30px;

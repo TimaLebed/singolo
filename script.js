@@ -171,3 +171,14 @@ const initEvents = () => {
 };
 
 document.addEventListener('DOMContentLoaded', initEvents);
+
+
+
+
+const hamburger = document.querySelector('.hamburger');
+
+
+hamburger.addEventListener('click', event => {
+  headerNav.classList.toggle('wrapper-active');
+  hamburger.classList.toggle('hamburger-rotate');
+});
