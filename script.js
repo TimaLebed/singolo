@@ -22,6 +22,7 @@ const inputForm = document.querySelectorAll('input');
 const wrapperSlider = document.querySelectorAll('.wrapper-slider');
 const sliderLeft = document.querySelector('.slider-left');
 const sliderRight = document.querySelector('.slider-right');
+const hamburger = document.querySelector('.hamburger');
 const headerHeight = document.querySelector('.header').offsetHeight;
 const shuffle = arr => arr.sort(() => Math.random() - 0.5);
 const newPortfolioImages = Array.from(portfolioImages);
@@ -143,6 +144,11 @@ const showWrapperSlider = direction => {
   });
 };
 
+const hamburgerEvent = event => {
+  headerNav.classList.toggle('wrapper-active');
+  hamburger.classList.toggle('hamburger-rotate');
+};
+
 const previousSlider = n => {
   hideLeftArrow();
   hideWrapperSlider('to-right');
@@ -168,17 +174,7 @@ const initEvents = () => {
   headerNav.addEventListener('click', headerNavEvent);
   sliderLeft.addEventListener('click', () => previousSlider(currentWrapperSlider));
   sliderRight.addEventListener('click', () => nextSlider(currentWrapperSlider));
+  hamburger.addEventListener('click', hamburgerEvent);
 };
 
 document.addEventListener('DOMContentLoaded', initEvents);
-
-
-
-
-const hamburger = document.querySelector('.hamburger');
-
-
-hamburger.addEventListener('click', event => {
-  headerNav.classList.toggle('wrapper-active');
-  hamburger.classList.toggle('hamburger-rotate');
-});
